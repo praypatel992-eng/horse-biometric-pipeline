@@ -1,13 +1,60 @@
-# Horse Biometric Analytics Pipeline (Benter Engine Core v1.0)
-**Developer: Pray Patel**
+# Horse Biometric Analytics Pipeline
 
-## Project Overview
-This software framework exploits a specific market inefficiency in sports handicapping pools. While standard public datasets rely completely on historical administrative variables (like past times and jockey weights), this engine quantifies real-time physical condition changes using alternative biometric features.
+**Developer:** Pray Patel  
+**Language:** Python
 
-## System Architecture Layers
-1. **AI Vision Pipeline (`test_vision.py`)**: Uses YOLOv8 neural networks to locate and isolate competitors within a bounding box matrix, slice specific muscle engine zones (hindquarters), and apply directional edge texture analysis to calculate a proprietary muscle condition index.
-2. **Predictive Quant Engine (`benter_ultra_engine.py` / `benter_ml_elite.py`)**: Implements multi-variable non-linear decision scoring and a Stage-2 Logarithmic Blending algorithm to calculate true win probabilities across a field.
-3. **Stochastic Simulator (`benter_monte_carlo.py`)**: Runs 10,000 parallel race simulations under normal distribution curves to model real-world chaotic track variance and calculate empirical returns.
-4. **Relational Ledger Archive (`save_to_database.py`)**: Anchors calculations and text logs securely into local persistent SQLite database storage schemas.
-5. **Settlement Auditor Core (`results_checker.py`)**: Parses pending bet matrices, applies contract multiplier math to official race results, and handles capital accounting tracking.
-6. 
+## Overview
+
+The Horse Biometric Analytics Pipeline is an experimental project that combines computer vision, probability modelling and Monte Carlo simulation to explore horse-racing predictions.
+
+The goal is to analyse image features, estimate race outcomes and organise prediction data in one software system.
+
+## Features
+
+- **Computer Vision:** Uses YOLOv8, OpenCV and NumPy to analyse images and calculate image-feature scores.
+- **Prediction Engines:** Calculates and combines estimated win probabilities.
+- **Monte Carlo Simulation:** Simulates 10,000 races to explore possible outcomes.
+- **Database:** Uses SQLite to store and retrieve race records.
+- **Results Checker:** Compares entered race results with simulated records.
+- **Analytics:** Generates charts to visualise example data.
+
+## Project Files
+
+| File | Purpose |
+|---|---|
+| `test_vision.py` | Image analysis |
+| `benter_ultra_engine.py` | Probability calculations |
+| `benter_ml_elite.py` | Prediction modelling |
+| `benter_ensemble_elite.py` | Combines prediction approaches |
+| `benter_monte_carlo.py` | Race simulations |
+| `save_to_database.py` | Reads race records from the database |
+| `results_checker.py` | Checks results and calculates settlements |
+| `generate_analytics.py` | Generates charts |
+| `master_control.py` | Main control menu |
+
+## Technologies
+
+- Python
+- OpenCV
+- NumPy
+- YOLOv8
+- SQLite
+- Matplotlib
+
+## Current Status
+
+The prediction and simulation scripts have been tested with example data. The complete pipeline has not yet been validated end-to-end.
+
+The model's predictive accuracy and the relationship between image features and physical condition require further testing against suitable data.
+
+## Future Improvements
+
+- Connect the modules into a complete workflow.
+- Test predictions against historical race results.
+- Measure prediction accuracy against a baseline.
+- Improve data storage and reproducibility.
+- Document results and limitations.
+
+## Disclaimer
+
+This project is for educational and research purposes. Its predictions are experimental and should not be considered reliable racing forecasts or financial advice.
